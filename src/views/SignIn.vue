@@ -1,5 +1,6 @@
 <template>
-  <div class="container-sign-in">
+  <form class="container-sign-in">
+    <h1>Log In</h1>
     <div class="inputb">
       <input type="text">
       <span data-placeholder="Username"></span>
@@ -8,11 +9,9 @@
       <input type="password">
       <span data-placeholder="Password"></span>
     </div>
-<!--    <div class="form-login">-->
-<!--      <input type="text" name="field1" placeholder="Full Name" />-->
-<!--      <input type="email" name="field2" placeholder="Email" />-->
-<!--    </div>-->
-  </div>
+    <input type="submit" class="signin-btn" value="Login">
+    <span class="bottom-text">Don't have an account? <a href="/signup">Sign Up</a></span>
+  </form>
 </template>
 
 <script>
@@ -50,6 +49,6 @@ export default {
 
 <style lang="scss" scoped>
   @import "src/styles/basics/variables";
-  @import "src/styles/page/signin";
   @import "src/styles/basics/fonts";
+  @import "src/styles/page/signin";
 </style>

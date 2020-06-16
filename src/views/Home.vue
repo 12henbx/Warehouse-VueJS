@@ -1,7 +1,7 @@
 <template>
   <div class="container-home">
     <LogoHeader></LogoHeader>
-    <MenuHeader></MenuHeader>
+    <MenuHeader v-bind:activeMenu="activeMenu"></MenuHeader>
 <!--    <img alt="Vue logo" src="./assets/logo.png">-->
     <!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
   </div>
@@ -19,6 +19,11 @@ export default {
     // HelloWorld
     LogoHeader,
     MenuHeader
+  },
+  data() {
+    return {
+      activeMenu: 'home'
+    }
   }
 }
 </script>

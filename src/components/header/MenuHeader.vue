@@ -1,48 +1,64 @@
 <template>
-  <div>
-    <ul class="nav">
-      <li class="nav-item">
-          <font-awesome-icon :icon="['fas', 'th-large']" />
-        <i class="fa fa-car"></i>
-      </li>
-      <li class="nav-item">
-          <font-awesome-icon :icon="['fas', 'bell']" />
-      </li>
-      <li class="nav-item">
-          <font-awesome-icon :icon="['fas', 'percentage']" />
-      </li>
-    </ul>
-  </div>
+  <nav class="nav-bar">
+      <span v-bind:class="{ active: activeMenu === 'home' }" class="nav-item">
+          <font-awesome-icon v-bind:class="{ 'active-icon': activeMenu === 'home', 'nav-icon': activeMenu !== 'home'}"
+                             :icon="['fas', 'th-large']" />
+      </span>
+      <span v-bind:class="{ active: activeMenu === 'notification' }" class="nav-item">
+          <font-awesome-icon v-bind:class="{ 'active-icon': activeMenu === 'notification', 'nav-icon': activeMenu !== 'home'}"
+                             :icon="['fas', 'bell']" />
+      </span>
+      <span v-bind:class="{ active: activeMenu === 'detail' }" class="nav-item">
+          <font-awesome-icon v-bind:class="{ 'active-icon': activeMenu === 'detail', 'nav-icon': activeMenu !== 'home'}"
+                             :icon="['fas', 'percentage']" />
+      </span>
+  </nav>
 </template>
 
 <script>
 export default {
-  name: "MenuHeader",
-  data: function () {
-    return {
-      title: 'Menu Header'
+    name: 'Menu',
+    props: {
+        activeMenu: String,
     }
-  },
-  // Usage with context the component
-  head: {
-    // To use "this" in the component, it is necessary to return the object through a function
-    title: function () {
-      return {
-        inner: this.title
-      }
-    },
-    link: [
-      { rel: 'stylesheet', href: 'node_modules/@fortawesome/fontawesome-free/css/fontawesome.css' },
-      { rel: 'stylesheet', href: 'node_modules/@fortawesome/fontawesome-free/css/brands.css' },
-      { rel: 'stylesheet', href: 'node_modules/@fortawesome/fontawesome-free/css/solid.css' },
-        { rel: 'stylesheet', href: 'node_modules/@fortawesome/fontawesome-free/css/all.css' },
-      // with shorthand
-      // { r: 'icon', h: 'path/to/icon-32.png', sz: '32x32', t: 'image/png' },
-    ],
-  },
 }
 </script>
 
 <style scoped lang="scss">
+    @import "src/styles/basics/variables";
+    .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        top: 0;
+        width: 100%;
+        height: 50px;
+        max-width: $max-phone-width;
+        border-bottom: 1px solid #adadad;
+    }
 
+    .nav-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        font-size: 28px;
+        margin: auto auto;
+        width: 30%;
+    }
+
+    .nav-bar span.nav-item:hover {
+        border-bottom: 3px solid #2D8CFA;
+    }
+
+    .nav-bar .active {
+        border-bottom: 3px solid #2D8CFA;
+    }
+
+    .active-icon {
+        color: #2D8CFA;
+    }
+
+    .nav-icon {
+        color: #65676B;
+    }
 </style>

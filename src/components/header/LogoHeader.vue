@@ -1,9 +1,9 @@
 <template>
-  <div class="logo-bar"
+  <header class="logo-bar"
        :class="{ 'logo-bar--hidden': !showLogoBar }">
 <!--    <img alt="Vue logo" src="src/assets/logo.png">-->
-    <h1>Warehouse</h1>
-  </div>
+    <h2>Warehouse</h2>
+  </header>
 </template>
 
 <script>
@@ -39,7 +39,7 @@ export default {
 
 <style scoped lang="scss">
 .logo-bar{
-  height: 60px;
+  height: 50px;
   width: 100%;
   background: hsl(200, 50%, 50%);
   box-shadow: 0 2px 15px rgba(71, 120, 120, 0.5);
@@ -51,5 +51,9 @@ export default {
   box-shadow: none;
   transform: translate3d(0, -100%, 0);
 }
+
+    h2{
+        margin-left: 10px;
+    }
 
 </style>
