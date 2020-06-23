@@ -6,3 +6,24 @@
   height: 2000px;
   margin: 0 auto 5px;
 }
+
+.col-menu{
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.card-list {
+  display: grid;
+  //grid-gap: 1em;
+  text-align: center;
+}
+
+.card-item {
+  background-color: dodgerblue;
+  padding: 2em;
+}

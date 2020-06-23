@@ -1,13 +1,18 @@
 <template>
   <form class="container-sign-in">
     <h1>Log In</h1>
-    <div class="inputb">
-      <input type="text">
-      <span data-placeholder="Username"></span>
+    <div class="username-box">
+      <label class="highlight-bottom">
+        <div class="text-user-box">
+          <span class="text-user">Username</span>
+        </div>
+        <div class="username-input-box">
+          <input class="username-input" type="text">
+        </div>
+      </label>
     </div>
-    <div class="inputb">
-      <input type="password">
-      <span data-placeholder="Password"></span>
+    <div class="password-box">
+      <input class="password-input" type="password">
     </div>
     <input type="submit" class="signin-btn" value="Login">
     <span class="bottom-text">Don't have an account? <a href="/signup">Sign Up</a></span>
