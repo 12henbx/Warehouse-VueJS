@@ -4,15 +4,22 @@
     <div class="username-box">
       <label class="highlight-bottom">
         <div class="text-user-box">
-          <span class="text-user">Username</span>
+          <span class="text-user"><font-awesome-icon class="search-icon" :icon="['fas', 'user']" /></span>
         </div>
-        <div class="username-input-box">
+        <div class="input-username-box">
           <input class="username-input" type="text">
         </div>
       </label>
     </div>
     <div class="password-box">
-      <input class="password-input" type="password">
+      <label class="highlight-bottom">
+        <div class="text-user-box">
+          <span class="text-user"><font-awesome-icon class="search-icon" :icon="['fas', 'lock']" /></span>
+        </div>
+        <div class="input-username-box">
+          <input class="username-input" type="password">
+        </div>
+      </label>
     </div>
     <input type="submit" class="signin-btn" value="Login">
     <span class="bottom-text">Don't have an account? <a href="/signup">Sign Up</a></span>

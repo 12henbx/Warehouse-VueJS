@@ -47,15 +47,15 @@ export default {
     }
 
     .nav-bar span.nav-item:hover {
-        border-bottom: 3px solid #2D8CFA;
+        border-bottom: 3px solid $active-blue-color;
     }
 
     .nav-bar .active {
-        border-bottom: 3px solid #2D8CFA;
+        border-bottom: 3px solid $active-blue-color;
     }
 
     .active-icon {
-        color: #2D8CFA;
+        color: $active-blue-color;
     }
 
     .nav-icon {

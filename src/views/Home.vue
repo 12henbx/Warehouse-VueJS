@@ -13,7 +13,7 @@
             <HomeMenu></HomeMenu>
         </li>
     </ul>
-    <SearchBar></SearchBar>
+<!--    <SearchBar></SearchBar>-->
 <!--    <img alt="Vue logo" src="./assets/logo.png">-->
     <!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
   </div>
@@ -25,7 +25,6 @@
 import LogoHeader from "../components/header/LogoHeader";
 import MenuHeader from "../components/header/MenuHeader";
 import HomeMenu from "../components/HomeMenu";
-import SearchBar from "../components/SearchBar";
 
 export default {
   name: 'Home',
@@ -34,7 +33,6 @@ export default {
     LogoHeader,
     MenuHeader,
     HomeMenu,
-    SearchBar
   },
   data() {
     return {

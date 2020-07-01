@@ -1,8 +1,14 @@
 <template>
-        <div class="search-box">
-            <span class="sp-search"><font-awesome-icon class="search-icon" :icon="['fas', 'search']" /></span>
-            <input type="text" class="input-search" placeholder="Search" aria-label="Search"/>
-        </div>
+    <div class="search-box">
+        <label class="highlight-bottom">
+            <div class="text-search-box">
+                <span class="text-search"><font-awesome-icon class="search-icon" :icon="['fas', 'search']" /></span>
+            </div>
+            <div class="input-search-box">
+                <input type="text" class="input-search" placeholder="Search" aria-label="Search"/>
+            </div>
+        </label>
+    </div>
 </template>
 
 <script>
@@ -11,12 +17,16 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+    @import "src/styles/basics/variables";
+    @import "src/styles/basics/fonts";
     .input-search {
-        border-bottom: 2px solid #adadad;
+        /*border-bottom: 2px solid #adadad;*/
         /*position: relative;*/
         /*margin: 30px 0;*/
         width: 200px;
+        border: 0;
+        outline: 0;
         /*float: left;*/
     }
 
@@ -32,6 +42,29 @@
         /*vertical-align: middle;*/
         /*white-space: nowrap;*/
         /*position: relative;*/
+    }
+
+    .highlight-bottom {
+        display: flex;
+        background-color: transparent;
+        border-bottom: 2px solid $border-bottom-color;
+        align-items: stretch;
+        height: fit-content;
+        width: max-content;
+        z-index: 0;
+        position: relative;
+    }
+
+    .text-search-box {
+        margin-right: 10px;
+    }
+
+    .input-search-box {
+        margin-bottom: 5px;
+    }
+
+    .search-icon {
+        font-size: 22px;
     }
 
     /*.search-box .sp-search{*/
