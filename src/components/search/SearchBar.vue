@@ -18,8 +18,8 @@
 </script>
 
 <style lang="scss" scoped>
-    @import "src/styles/basics/variables";
-    @import "src/styles/basics/fonts";
+    @import "../../styles/basics/variables";
+    @import "../../styles/basics/fonts";
     .input-search {
         /*border-bottom: 2px solid #adadad;*/
         /*position: relative;*/

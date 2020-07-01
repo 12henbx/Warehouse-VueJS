@@ -24,7 +24,7 @@
 // import HelloWorld from '@/components/HelloWorld.vue'
 import LogoHeader from "../components/header/LogoHeader";
 import MenuHeader from "../components/header/MenuHeader";
-import HomeMenu from "../components/HomeMenu";
+import HomeMenu from "../components/button/HomeMenu";
 
 export default {
   name: 'Home',
