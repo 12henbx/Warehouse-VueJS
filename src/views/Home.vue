@@ -2,17 +2,14 @@
   <div class="container-home">
     <LogoHeader></LogoHeader>
     <MenuHeader v-bind:activeMenu="activeMenu"></MenuHeader>
-    <ul :style="gridStyle" class="card-list">
-<!--      <li v-for="(card, index) in cards" class="card-item">-->
-<!--        {{ index + 1 }}-->
-<!--      </li>-->
-      <li class="button-item">
-        <HomeMenu></HomeMenu>
-      </li>
-        <li class="button-item">
-            <HomeMenu></HomeMenu>
-        </li>
-    </ul>
+      <div>
+          <ul :style="gridStyle" class="card-list">
+            <li v-for="(menu, index) in menuList" :key="`menu-${index}`" class="button-item">
+                <HomeMenu v-bind:textMenu="menu"></HomeMenu>
+            </li>
+          </ul>
+      </div>
+
 <!--    <SearchBar></SearchBar>-->
 <!--    <img alt="Vue logo" src="./assets/logo.png">-->
     <!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
@@ -36,7 +33,13 @@ export default {
   },
   data() {
     return {
-      activeMenu: 'home'
+      activeMenu: 'home',
+        menuList: [
+            {name: 'ASN', new: 1, link: '/asn/index'},
+            {name: 'Loading Dock', new: 0, link: 'loading-dock/index'},
+            {name: 'Container Activity', new: 0, link: 'container-activity/index'},
+            {name: 'Putaway', new: 1, link: 'putaway/index'}
+        ] // Vue.set(vm.userProfile, 'age', 27)
     }
   },
     computed: {
@@ -53,5 +56,4 @@ export default {
   @import "src/styles/basics/variables";
   @import "src/styles/page/home";
   @import "src/styles/basics/fonts";
-  /*@import "src/styles/basics/layout";*/
 </style>
