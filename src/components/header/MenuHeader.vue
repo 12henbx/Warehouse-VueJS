@@ -1,25 +1,33 @@
 <template>
   <nav class="nav-bar">
-      <span v-bind:class="{ active: activeMenu === 'home' }" class="nav-item">
+      <span @click="navigateRouter('home')" v-bind:class="{ active: activeMenu === 'home' }" class="nav-item">
           <font-awesome-icon v-bind:class="{ 'active-icon': activeMenu === 'home', 'nav-icon': activeMenu !== 'home'}"
                              :icon="['fas', 'th-large']" />
       </span>
-      <span v-bind:class="{ active: activeMenu === 'notification' }" class="nav-item">
-          <font-awesome-icon v-bind:class="{ 'active-icon': activeMenu === 'notification', 'nav-icon': activeMenu !== 'home'}"
+      <span @click="navigateRouter('notifications')" v-bind:class="{ active: activeMenu === 'notification' }" class="nav-item">
+          <font-awesome-icon v-bind:class="{ 'active-icon': activeMenu === 'notification', 'nav-icon': activeMenu !== 'notification'}"
                              :icon="['fas', 'bell']" />
       </span>
-      <span v-bind:class="{ active: activeMenu === 'detail' }" class="nav-item">
-          <font-awesome-icon v-bind:class="{ 'active-icon': activeMenu === 'detail', 'nav-icon': activeMenu !== 'home'}"
+      <span @click="navigateRouter('statistics')" v-bind:class="{ active: activeMenu === 'statistics' }" class="nav-item">
+          <font-awesome-icon v-bind:class="{ 'active-icon': activeMenu === 'statistics', 'nav-icon': activeMenu !== 'statistics'}"
                              :icon="['fas', 'percentage']" />
       </span>
   </nav>
+<!--    <a href="#" @click='goTo("foo")'>Foo</a>-->
 </template>
 
 <script>
+import router from "../../router";
+
 export default {
     name: 'Menu',
     props: {
         activeMenu: String,
+    },
+    methods: {
+        navigateRouter(name){
+            router.push({ name })
+        }
     }
 }
 </script>

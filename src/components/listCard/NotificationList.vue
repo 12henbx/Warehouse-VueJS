@@ -1,11 +1,11 @@
 <template>
     <div class="card-box">
         <div class="left-card-box">
-            <span></span>
-            <span></span>
+            <span class="notif-text">test</span>
+            <span class="time-text">test1</span>
         </div>
         <div class="right-card-box">
-            <span></span>
+            <span>testtest</span>
         </div>
     </div>
 </template>
@@ -17,5 +17,26 @@
 </script>
 
 <style lang="scss" scoped>
+    @import "src/styles/basics/variables";
+    @import "src/styles/page/home";
+    @import "src/styles/basics/fonts";
 
+    .card-box {
+        display: flex;
+        flex-direction: row;
+        padding: 0 15px;
+    }
+
+    .left-card-box {
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+        width: 80%;
+    }
+
+    .right-card-box {
+        width: 20%;
+        display: flex;
+        height: max-content;
+    }
 </style>

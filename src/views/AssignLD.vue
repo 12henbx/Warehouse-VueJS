@@ -1,5 +1,7 @@
 <template>
-    
+    <div class="container-home">
+        <LogoHeader></LogoHeader>
+    </div>
 </template>
 
 <script>
