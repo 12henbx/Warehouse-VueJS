@@ -1,5 +1,5 @@
 <template>
-    <div class="container-home">
+    <div class="container-page">
         <LogoHeader></LogoHeader>
         <MenuHeader v-bind:activeMenu="activeMenu"></MenuHeader>
     </div>
@@ -26,4 +26,5 @@
     @import "src/styles/basics/variables";
     @import "src/styles/page/statistics";
     @import "src/styles/basics/fonts";
+    @import "src/styles/basics/viewpage";
 </style>

@@ -35,10 +35,11 @@
     }
 
     .search-box{
-        /*display: flex;*/
+        display: flex;
         overflow: hidden;
         width: 300px;
-        height: 100px;
+        height: auto;
+        justify-content: center;
         /*vertical-align: middle;*/
         /*white-space: nowrap;*/
         /*position: relative;*/

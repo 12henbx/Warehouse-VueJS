@@ -4,7 +4,7 @@ import VueHead from 'vue-head'
 import Home from '../views/Home.vue';
 import SignIn from '../views/SignIn.vue';
 import Notification from "../views/Notification";
-// import AssignLD from "../views/AssignLD";
+import AssignLD from "../views/AssignLD";
 // import ContainerActivity from "../views/ContainerActivity";
 // import ContainerActivityDetail from "../views/ContainerActivityDetail";
 import Statistics from "../views/Statistics";
@@ -16,7 +16,7 @@ const routes = [
   { path: '/', name: 'home', component: Home},
   { path: '/login', name: 'login', component: SignIn },
   { path: '/notifications', name: 'notifications', component: Notification },
-  // { path: '/assignLD', name: 'assign loading dock', component: AssignLD },
+  { path: '/assignLD', name: 'assign loading dock', component: AssignLD },
   // { path: '/containerActivity', name: 'container activity', component: ContainerActivity },
   // { path: '/caDetail', name: 'container activity detail', component: ContainerActivityDetail },
   { path: '/statistics', name: 'statistics', component: Statistics }

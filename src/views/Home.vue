@@ -3,6 +3,7 @@
     <LogoHeader></LogoHeader>
     <MenuHeader v-bind:activeMenu="activeMenu"></MenuHeader>
       <div>
+          <h4>Inbound</h4>
           <ul :style="gridStyle" class="card-list">
             <li v-for="(menu, index) in menuList" :key="`menu-${index}`" class="button-item">
                 <HomeMenu v-bind:textMenu="menu"></HomeMenu>
@@ -35,9 +36,9 @@ export default {
     return {
       activeMenu: 'home',
         menuList: [
-            {name: 'ASN', new: 1, link: '/asn/index'},
-            {name: 'Loading Dock', new: 0, link: 'loading-dock/index'},
-            {name: 'Container Activity', new: 0, link: 'container-activity/index'},
+            {name: 'ASN', new: 1, link: 'assign loading dock'},
+            {name: 'Loading Dock', new: 0, link: 'assign loading dock'},
+            {name: 'Container Activity', new: 0, link: 'assign loading dock'},
             {name: 'Putaway', new: 1, link: 'putaway/index'}
         ] // Vue.set(vm.userProfile, 'age', 27)
     }

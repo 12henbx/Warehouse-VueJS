@@ -25,6 +25,8 @@
         display: flex;
         flex-direction: row;
         padding: 0 15px;
+        border-top: 1px solid #adadad;
+        border-bottom: 1px solid #adadad;
     }
 
     .left-card-box {
@@ -37,6 +39,8 @@
     .right-card-box {
         width: 20%;
         display: flex;
-        height: max-content;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
     }
 </style>

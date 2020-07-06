@@ -5,11 +5,11 @@ import router from './router'
 import { store } from './store'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faThLarge, faCamera, faUserSecret, faCoffee, faBell, faPercentage, faSearch, faUser, faLock } from '@fortawesome/free-solid-svg-icons'
+import { faThLarge, faCamera, faUserSecret, faCoffee, faBell, faPercentage, faSearch, faUser, faLock, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 
-library.add(faThLarge, faCamera, faUserSecret, faCoffee, faBell, faPercentage, faSearch, faUser, faLock)
+library.add(faThLarge, faCamera, faUserSecret, faCoffee, faBell, faPercentage, faSearch, faUser, faLock,faArrowLeft)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
