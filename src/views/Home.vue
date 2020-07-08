@@ -36,10 +36,10 @@ export default {
     return {
       activeMenu: 'home',
         menuList: [
-            {name: 'ASN', new: 1, link: 'assign loading dock'},
-            {name: 'Loading Dock', new: 0, link: 'assign loading dock'},
-            {name: 'Container Activity', new: 0, link: 'assign loading dock'},
-            {name: 'Putaway', new: 1, link: 'putaway/index'}
+            {name: 'ASN', new: 1, link: 'assign loading dock', query: 'asn-9'},
+            {name: 'Loading Dock', new: 0, link: 'assign loading dock', query: 'asn-9'},
+            {name: 'Container Activity', new: 0, link: 'container activity', query: 'asn-9'},
+            {name: 'Putaway', new: 1, link: 'putaway/index', query: 'asn-9'}
         ] // Vue.set(vm.userProfile, 'age', 27)
     }
   },

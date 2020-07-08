@@ -1,5 +1,5 @@
 <template>
-    <button @click="navigateMenu(textMenu.link)" type="button" class="menu-btn">
+    <button @click="navigateMenu(textMenu.link, textMenu.query)" type="button" class="menu-btn">
         <span class="menu-title">{{ textMenu.name }}</span>
         <span class="notif-count" v-if="textMenu.new > 0">{{ textMenu.new }} new</span>
     </button>
@@ -19,8 +19,10 @@
             }
         },
         methods: {
-            navigateMenu(name){
-                router.push({ name })
+            navigateMenu(name, query){
+                // console.log({name}, " ", query)
+                router.push({ name: name, query: { term : query } })
+                // router.push({ path: 'register', query: { plan: 'private' }})
             }
         }
     }

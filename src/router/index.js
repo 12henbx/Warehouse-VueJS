@@ -5,8 +5,8 @@ import Home from '../views/Home.vue';
 import SignIn from '../views/SignIn.vue';
 import Notification from "../views/Notification";
 import AssignLD from "../views/AssignLD";
-// import ContainerActivity from "../views/ContainerActivity";
-// import ContainerActivityDetail from "../views/ContainerActivityDetail";
+import ContainerActivity from "../views/ContainerActivity";
+import ContainerActivityDetail from "../views/ContainerActivityDetail";
 import Statistics from "../views/Statistics";
 
 Vue.use(VueRouter);
@@ -17,8 +17,8 @@ const routes = [
   { path: '/login', name: 'login', component: SignIn },
   { path: '/notifications', name: 'notifications', component: Notification },
   { path: '/assignLD', name: 'assign loading dock', component: AssignLD },
-  // { path: '/containerActivity', name: 'container activity', component: ContainerActivity },
-  // { path: '/caDetail', name: 'container activity detail', component: ContainerActivityDetail },
+  { path: '/containerActivity', name: 'container activity', component: ContainerActivity },
+  { path: '/caDetail', name: 'container activity detail', component: ContainerActivityDetail },
   { path: '/statistics', name: 'statistics', component: Statistics }
   // {
   //   path: '/about',

@@ -5,7 +5,7 @@
                 <span class="text-search"><font-awesome-icon class="search-icon" :icon="['fas', 'search']" /></span>
             </div>
             <div class="input-search-box">
-                <input type="text" class="input-search" placeholder="Search" aria-label="Search"/>
+                <input type="text" v-model="searchQuery" class="input-search" placeholder="Search" aria-label="Search"/>
             </div>
         </label>
     </div>
@@ -13,7 +13,10 @@
 
 <script>
     export default {
-        name: "SearchBar"
+        name: "SearchBar",
+        props: {
+            searchQuery: String,
+        }
     }
 </script>
 

@@ -2,7 +2,7 @@
     <div class="container-page">
         <PageHeader></PageHeader>
         <div class="search-area">
-            <SearchBar></SearchBar>
+            <SearchBar v-bind:searchQuery="searchQuery"></SearchBar>
         </div>
         <div>
             <AssignLDList></AssignLDList>
@@ -20,6 +20,18 @@
             PageHeader,
             SearchBar,
             AssignLDList
+        },
+        data() {
+            return {
+                term: this.$route.query.term,
+                items: [],
+                searchQuery: this.$route.query.term
+            }
+        },
+        created() {
+            if (this.term != null){
+                console.log(this.term)
+            }
         }
     }
 </script>
