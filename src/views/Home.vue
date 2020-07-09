@@ -4,7 +4,7 @@
     <MenuHeader v-bind:activeMenu="activeMenu"></MenuHeader>
       <div>
           <h4>Inbound</h4>
-          <ul :style="gridStyle" class="card-list">
+          <ul :style="gridStyle" class="card-grid">
             <li v-for="(menu, index) in menuList" :key="`menu-${index}`" class="button-item">
                 <HomeMenu v-bind:textMenu="menu"></HomeMenu>
             </li>

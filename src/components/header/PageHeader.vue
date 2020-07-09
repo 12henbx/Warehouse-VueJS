@@ -22,10 +22,13 @@
 <style lang="scss" scoped>
     .header-box {
         display: flex;
+        position: fixed;
         height: 54px;
         flex-direction: row;
         align-items: center;
         padding: 0 10px;
+        z-index: 100;
+
         /*border-bottom: 1px solid #adadad;*/
     }
 

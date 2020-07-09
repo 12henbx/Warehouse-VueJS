@@ -1,12 +1,16 @@
 <template>
     <div class="container-page">
-
+        <CADetailHeader></CADetailHeader>
     </div>
 </template>
 
 <script>
+    import CADetailHeader from "../components/header/CADetailHeader";
     export default {
-        name: "ContainerActivityDetail"
+        name: "ContainerActivityDetail",
+        components: {
+            CADetailHeader
+        }
     }
 </script>
 
