@@ -16,9 +16,11 @@
     export default {
         name: "CADetailHeader",
         data() {
-            detailItem: [
-                "c. activity", "l. dock", "c. number", "status", "checker"
-            ]
+            return{
+                detailItem: [
+                    "c. activity", "l. dock", "c. number", "status", "checker"
+                ]
+            }
         },
         computed: {
             gridStyle() {
@@ -32,5 +34,14 @@
 </script>
 
 <style lang="scss" scoped>
+    .card-grid {
+        display: grid;
+        //grid-gap: 1em;
+        text-align: center;
+    }
 
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
 </style>

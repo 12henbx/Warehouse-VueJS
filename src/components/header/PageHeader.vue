@@ -1,6 +1,5 @@
 <template>
-    <header>
-        <div class="header-box">
+        <header class="header-box">
             <div class="icon-box">
                 <span class="icon-span">
                     <font-awesome-icon class="back-icon" :icon="['fas', 'arrow-left']" />
@@ -9,8 +8,7 @@
             <div class="title-box">
                 <h3 class="menu-title">Assign Loading Dock</h3>
             </div>
-        </div>
-    </header>
+        </header>
 </template>
 
 <script>
@@ -24,12 +22,11 @@
         display: flex;
         position: fixed;
         height: 54px;
+        width: fit-content;
         flex-direction: row;
         align-items: center;
         padding: 0 10px;
         z-index: 100;
-
-        /*border-bottom: 1px solid #adadad;*/
     }
 
     .icon-box {

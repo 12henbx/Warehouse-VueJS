@@ -1,6 +1,8 @@
 <template>
     <div class="container-page">
-        <PageHeader></PageHeader>
+        <div class="place-header">
+            <PageHeader></PageHeader>
+        </div>
         <div class="search-area">
             <SearchBar v-bind:searchQuery="searchQuery"></SearchBar>
         </div>

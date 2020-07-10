@@ -5,9 +5,15 @@
       <div>
           <h4>Inbound</h4>
           <ul :style="gridStyle" class="card-grid">
-            <li v-for="(menu, index) in menuList" :key="`menu-${index}`" class="button-item">
+            <li v-for="(menu, index) in inboundList" :key="`menu-${index}`" class="button-item">
                 <HomeMenu v-bind:textMenu="menu"></HomeMenu>
             </li>
+          </ul>
+          <h4>Outbound</h4>
+          <ul :style="gridStyle" class="card-grid">
+              <li v-for="(menu, index) in outboundList" :key="`menu-${index}`" class="button-item">
+                  <HomeMenu v-bind:textMenu="menu"></HomeMenu>
+              </li>
           </ul>
       </div>
 
@@ -35,12 +41,17 @@ export default {
   data() {
     return {
       activeMenu: 'home',
-        menuList: [
+        inboundList: [
             {name: 'ASN', new: 1, link: 'assign loading dock', query: 'asn-9'},
             {name: 'Loading Dock', new: 0, link: 'assign loading dock', query: 'asn-9'},
             {name: 'Container Activity', new: 0, link: 'container activity', query: 'asn-9'},
             {name: 'Putaway', new: 1, link: 'putaway/index', query: 'asn-9'}
-        ] // Vue.set(vm.userProfile, 'age', 27)
+        ], // Vue.set(vm.userProfile, 'age', 27)
+        outboundList: [
+            {name: 'Sales Order', new: 1, link: 'sales order', query: 'so-9'},
+            {name: 'Picking Sales Order', new: 0, link: 'picking sales order', query: 'asn-9'},
+            {name: 'Putaway', new: 0, link: 'putaway', query: 'asn-9'}
+        ]
     }
   },
     computed: {

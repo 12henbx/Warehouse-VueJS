@@ -8,6 +8,8 @@ import AssignLD from "../views/AssignLD";
 import ContainerActivity from "../views/ContainerActivity";
 import ContainerActivityDetail from "../views/ContainerActivityDetail";
 import Statistics from "../views/Statistics";
+import PutawayInbound from "../views/PutawayInbound";
+import PutawayOutbound from "../views/PutawayOutbound";
 
 Vue.use(VueRouter);
 Vue.use(VueHead);
@@ -16,10 +18,12 @@ const routes = [
   { path: '/', name: 'home', component: Home},
   { path: '/login', name: 'login', component: SignIn },
   { path: '/notifications', name: 'notifications', component: Notification },
-  { path: '/assignLD', name: 'assign loading dock', component: AssignLD },
-  { path: '/containerActivity', name: 'container activity', component: ContainerActivity },
-  { path: '/caDetail', name: 'container activity detail', component: ContainerActivityDetail },
-  { path: '/statistics', name: 'statistics', component: Statistics }
+  { path: '/assignld', name: 'assign loading dock', component: AssignLD },
+  { path: '/container-activity', name: 'container activity', component: ContainerActivity },
+  { path: '/container-activity/:id', name: 'container activity detail', component: ContainerActivityDetail },
+  { path: '/statistics', name: 'statistics', component: Statistics },
+  { path: '/putaway-inbound', name: 'putaway inbound', component: PutawayInbound },
+  { path: '/putaway-outbound', name: 'putaway outbound', component: PutawayOutbound }
   // {
   //   path: '/about',
   //   name: 'about',
