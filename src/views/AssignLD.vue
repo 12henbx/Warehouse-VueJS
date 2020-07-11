@@ -7,7 +7,11 @@
             <SearchBar v-bind:searchQuery="searchQuery"></SearchBar>
         </div>
         <div>
-            <AssignLDList></AssignLDList>
+            <ul class="card-list">
+                <li v-for="(assignItem, index) in items" :key="`assignItem-${index}`" class="button-item">
+                    <AssignLDList v-bind:assignObject="assignItem"></AssignLDList>
+                </li>
+            </ul>
         </div>
     </div>
 </template>
@@ -26,7 +30,13 @@
         data() {
             return {
                 term: this.$route.query.term,
-                items: [],
+                items: [
+                    {truck: 'Truk 1', asn:'ASN-10/wq/123/tr', assignDate:'05/07/20', assignStartTime:'05:00', assignEndTime:'07:00', internalStatus:'Assigned', externalStatus:'Pending'},
+                    {truck: 'Truk 2', asn:'ASN-10/wq/123/tr', assignDate:'05/07/20', assignStartTime:'07:00', assignEndTime:'08:00', internalStatus:'Assigned', externalStatus:'Pending'},
+                    {truck: 'Truk 1', asn:'ASN-12/wq/124/yu', assignDate:'05/07/20', assignStartTime:'08:00', assignEndTime:'09:30', internalStatus:'Assigned', externalStatus:'Pending'},
+                    {truck: 'Truk 2', asn:'ASN-12/wq/124/yu', assignDate:'05/07/20', assignStartTime:'09:30', assignEndTime:'11:00', internalStatus:'Assigned', externalStatus:'Pending'},
+                    {truck: 'Truk 1', asn:'ASN-14/wq/126/io', assignDate:'05/07/20', assignStartTime:'11:00', assignEndTime:'12:30', internalStatus:'Assigned', externalStatus:'Pending'}
+                ],
                 searchQuery: this.$route.query.term
             }
         },

@@ -1,23 +1,27 @@
 <template>
     <div @click="even" class="card-box">
         <div class="top-card-box">
-            <span>Truk 1 - ASN ../qw/123/er</span>
+            <span>{{ assignObject.truck }}</span>
+            <span> - </span>
+            <span>{{ assignObject.asn }}</span>
         </div>
         <div class="middle-card-box">
             <div class="left-middle-card">
-                <a>05/07/20</a>
+                <a>{{ assignObject.assignDate }}</a>
             </div>
             <div class="right-middle-card/">
-                <a>05.00 - 07.00</a>
+                <a>{{ assignObject.assignStartTime }}</a>
+                <a> - </a>
+                <a>{{ assignObject.assignEndTime }}</a>
             </div>
         </div>
         <div class="bottom-card-box">
             <div class="background-bottom-card">
                 <div class="left-bottom-card">
-                    <a>Assigned</a>
+                    <a>{{ assignObject.internalStatus }}</a>
                 </div>
                 <div class="right-bottom-card">
-                    <a>Pending</a>
+                    <a>{{ assignObject.externalStatus }}</a>
                 </div>
             </div>
         </div>
@@ -28,6 +32,9 @@
     import router from "../../router";
     export default {
         name: "AssignLDList",
+        props: {
+            assignObject:Object
+        },
         methods: {
             even() {
                 router.push("/")
@@ -40,6 +47,7 @@
 
     .card-box {
         display: flex;
+        width: 100%;
         flex-direction: column;
         border-top: 1px solid #adadad;
         border-bottom: 1px solid #adadad;
@@ -58,6 +66,7 @@
 
     .background-bottom-card {
         display: flex;
+        width: 100%;
         flex-direction: row;
         justify-content: space-around;
         background: #adadad;

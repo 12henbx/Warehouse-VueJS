@@ -36,6 +36,16 @@
         width: 80%;
     }
 
+    .notif-text{
+        font-size: 25px;
+
+    }
+
+    .time-text{
+        font-size: 14px;
+        font-weight: lighter;
+    }
+
     .right-card-box {
         width: 20%;
         display: flex;

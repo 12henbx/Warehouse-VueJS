@@ -7,5 +7,21 @@
 .search-area {
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: 10px 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.button-item {
+  display: flex;
+  justify-content: center;
+}
+
+.card-list {
+  display: list-item;
+  //grid-gap: 1em;
+  //text-align: center;
 }
