@@ -60,13 +60,13 @@
 
     .middle-card-box{
         display: flex;
+        width: 100%;
         flex-direction: row;
         justify-content: space-around;
     }
 
     .background-bottom-card {
         display: flex;
-        width: 100%;
         flex-direction: row;
         justify-content: space-around;
         background: #adadad;

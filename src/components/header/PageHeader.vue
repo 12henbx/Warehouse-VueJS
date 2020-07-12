@@ -6,14 +6,17 @@
                 </span>
             </div>
             <div class="title-box">
-                <h3 class="menu-title">Assign Loading Dock</h3>
+                <h3 class="menu-title">{{menuTitle}}</h3>
             </div>
         </header>
 </template>
 
 <script>
     export default {
-        name: "PageHeader"
+        name: "PageHeader",
+        props:{
+            menuTitle:String
+        }
     }
 </script>
 
