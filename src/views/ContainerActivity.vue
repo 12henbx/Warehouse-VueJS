@@ -25,9 +25,9 @@
         data(){
             return{
                 caList:[
-                    {containerActivity: 'CA-1278/PO/55/123', containerNo: '3456-3GHT', loadingDock: 'Ceper', checker: 'Budi', status: 'Approved'},
-                    {containerActivity: 'CA-1279/PO/55/121', containerNo: '3456-2ACF', loadingDock: 'Batu', checker: 'Kurnia', status: 'Pending'},
-                    {containerActivity: 'CA-1280/PO/57/125', containerNo: '3456-9DPT', loadingDock: 'Ceper', checker: 'Budi', status: 'Pending'}
+                    {containerActivity: 'CA-1278-PO-55-123', type: 'Regular', containerNo: '3456-3GHT', loadingDock: 'Ceper', checker: 'Budi', status: 'Approved'},
+                    {containerActivity: 'CA-1279-PO-55-121', type: 'Regular', containerNo: '3456-2ACF', loadingDock: 'Batu', checker: 'Kurnia', status: 'Pending'},
+                    {containerActivity: 'CA-1280-PO-57-125', type: 'Reject', containerNo: '3456-9DPT', loadingDock: 'Ceper', checker: 'Budi', status: 'Pending'}
                 ],
                 title: "Container Activity"
             }

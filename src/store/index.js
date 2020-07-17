@@ -5,6 +5,10 @@ import { alert } from './alert';
 import { account } from './account';
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
+import VueQrcodeReader from "vue-qrcode-reader";
+
+Vue.use(VueQrcodeReader);
+
 // Install BootstrapVue
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin

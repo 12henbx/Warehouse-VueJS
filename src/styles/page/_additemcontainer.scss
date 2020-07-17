@@ -1,0 +1,88 @@
+.place-header{
+  display: flex;
+  width: 100%;
+  height: 54px;
+  background-color: deepskyblue;
+}
+
+.supplier-input-box {
+  display: flex;
+  align-items: stretch;
+  height: 80px;
+  width: 80%;
+  border: none;
+}
+
+.highlight-bottom {
+  display: flex;
+  background-color: transparent; //#f5f8fa;
+  border-bottom: 2px solid $border-bottom-color;
+  align-items: stretch;
+  height: fit-content;
+  width: max-content;
+  z-index: 0;
+  position: relative;
+}
+
+.text-user-box {
+  display: flex;
+  align-self: flex-start;
+  overflow: hidden;
+  position: relative;
+  padding: 0 10px;
+  width: max-content;
+}
+
+.text-user {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+
+.input-username-box {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  box-sizing: border-box;
+  width: max-content;
+  overflow-wrap: break-word;
+  -webkit-box-sizing: border-box; // height, width diukur sampai border mozilla
+  -moz-box-sizing: border-box;  // chrome, safari
+}
+
+.username-input {
+  display: block;
+  padding: 2px 10px 5px;
+  overflow-wrap: break-word;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  text-align: start;
+  white-space: pre-wrap;
+  width: 100%;
+  height: 30px;
+}
+ // Product Name Input Box
+.product-input-box {
+  display: flex;
+  align-items: stretch;
+  height: 80px;
+  width: 80%;
+  border: none;
+}
+ // Expired Date Input Box
+.expired-input-box{
+  display: flex;
+  align-items: stretch;
+  height: 80px;
+  width: 80%;
+  border: none;
+}
+ // Quantity Input Box
+.quantity-input-box {
+  display: flex;
+  align-items: stretch;
+  height: 80px;
+  width: 80%;
+  border: none;
+}

@@ -10,6 +10,7 @@ import ContainerActivityDetail from "../views/ContainerActivityDetail";
 import Statistics from "../views/Statistics";
 import PutawayInbound from "../views/PutawayInbound";
 import PutawayOutbound from "../views/PutawayOutbound";
+import AddItemContainerActivity from "../views/AddItemContainerActivity";
 
 Vue.use(VueRouter);
 Vue.use(VueHead);
@@ -23,7 +24,8 @@ const routes = [
   { path: '/container-activity/:id', name: 'container activity detail', component: ContainerActivityDetail },
   { path: '/statistics', name: 'statistics', component: Statistics },
   { path: '/putaway-inbound', name: 'putaway inbound', component: PutawayInbound },
-  { path: '/putaway-outbound', name: 'putaway outbound', component: PutawayOutbound }
+  { path: '/putaway-outbound', name: 'putaway outbound', component: PutawayOutbound },
+  { path: '/container-activity/:id/add-item', name: 'container activity add item', component: AddItemContainerActivity }
   // {
   //   path: '/about',
   //   name: 'about',

@@ -34,14 +34,24 @@
 </script>
 
 <style lang="scss" scoped>
+
     .card-grid {
         display: grid;
         //grid-gap: 1em;
         text-align: center;
+        padding-top: 10px;
+        grid-template: 40px 40px 40px/ auto auto; // height height height (row) / width width (column)
+        font-size: 22px;
     }
 
     ul {
         list-style-type: none;
         padding: 0;
+    }
+
+    .background-detail-box {
+        height: 200px;
+        background-color: deepskyblue;
+        border-radius: 0 0 150% 150%/0 0 100% 100%;
     }
 </style>

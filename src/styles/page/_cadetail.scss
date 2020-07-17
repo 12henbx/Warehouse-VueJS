@@ -1,0 +1,48 @@
+.place-header{
+  display: flex;
+  width: 100%;
+  height: 54px;
+  background-color: deepskyblue;
+}
+
+.top-item-list{
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0 12px;
+}
+
+.text-h3{
+  display: flex;
+  width: 50%;
+  margin-left: 10px;
+}
+
+.button-add-box{
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.bottom-putaway-box{
+  display: flex;
+  width: $max-phone-width;
+  height: 54px;
+  position: fixed;
+  bottom: 0;
+}
+
+.background-bottom-putaway{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #63baf6;
+  justify-content: flex-end;
+}
+
+.button-putaway{
+  height: 30px;
+  width: 100px;
+  margin-right: 20px;
+}
