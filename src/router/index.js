@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueHead from 'vue-head'
+import VModal from 'vue-js-modal'
 import Home from '../views/Home.vue';
 import SignIn from '../views/SignIn.vue';
 import Notification from "../views/Notification";
@@ -14,6 +15,7 @@ import AddItemContainerActivity from "../views/AddItemContainerActivity";
 
 Vue.use(VueRouter);
 Vue.use(VueHead);
+Vue.use(VModal);
 
 const routes = [
   { path: '/', name: 'home', component: Home},

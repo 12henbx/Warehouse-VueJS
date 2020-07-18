@@ -23,6 +23,9 @@
                     <button @click="goToMap" class="button-putaway">Putaway</button>
                 </div>
             </div>
+            <modal name="example">
+                <qrcode-stream class="qr-stream" @decode="onDecode"></qrcode-stream>
+            </modal>
         </div>
     </div>
 </template>
@@ -32,25 +35,46 @@
     import PageHeader from "../components/header/PageHeader";
     import router from "../router/index";
     import ContainerActivityDetailList from "../components/listCard/ContainerActivityDetailList";
+    // import { QrcodeStream } from 'vue-qrcode-reader'
 
     export default {
         name: "ContainerActivityDetail",
+        watch : {
+            onCam(val){
+                if (val === true){
+                    console.log("satu")
+                    this.$modal.show('example')
+                    this.onCam = false
+                }
+            }
+        },
         components: {
             ContainerActivityDetailList,
             PageHeader,
-            CADetailHeader
+            CADetailHeader,
+            // QrcodeStream
         },
         data() {
             return {
-                title: this.$route.params.id
+                title: this.$route.params.id,
+                onCam: false,
+                productName: ''
             }
         },
         methods: {
             checkAddItem(){
-                router.push({ path: `/container-activity/${this.$route.params.id}/add-item`})
+                // router.push({ path: `/container-activity/${this.$route.params.id}/add-item`})
+                this.onCam = true
             },
             goToMap(){
 
+            },
+            onDecode (decodedString) {
+                console.log(decodedString.toString())
+                if (decodedString !== ""){
+                    this.productName = decodedString.toString();
+                    router.push({ path: `/container-activity/${this.$route.params.id}/add-item`})
+                }
             }
         }
     }

@@ -46,3 +46,10 @@
   width: 100px;
   margin-right: 20px;
 }
+
+.qr-stream{
+  position: fixed;
+  height: 100%;
+  width: max-content;
+  z-index: 1;
+}

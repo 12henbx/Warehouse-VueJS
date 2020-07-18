@@ -1,20 +1,16 @@
 <template>
     <div class="container-page">
-        <qrcode-stream @decode="onDecode"></qrcode-stream>
-        <qrcode-drop-zone></qrcode-drop-zone>
-        <qrcode-capture></qrcode-capture>
+        <qrcode-stream class="qr-stream" @decode="onDecode"></qrcode-stream>
     </div>
 </template>
 
 <script>
-    import { QrcodeStream, QrcodeDropZone, QrcodeCapture } from 'vue-qrcode-reader'
+    import { QrcodeStream } from 'vue-qrcode-reader'
 
     export default {
         name: "ScanItemQRCode",
         components: {
             QrcodeStream,
-            QrcodeDropZone,
-            QrcodeCapture
         },
         methods: {
             onDecode (decodedString) {
@@ -28,4 +24,11 @@
     @import "src/styles/basics/variables";
     @import "src/styles/basics/fonts";
     @import "src/styles/basics/viewpage";
+
+    .qr-stream{
+        display: flex;
+        position: absolute;
+        height: 100%;
+        width: max-content;
+    }
 </style>
