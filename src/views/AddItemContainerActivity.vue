@@ -3,47 +3,49 @@
         <div class="place-header">
             <PageHeader v-bind:menuTitle="title"></PageHeader>
         </div>
-        <div class="supplier-input-box">
-            <label class="highlight-bottom">
-                <div class="text-user-box">
-                    <span class="text-user"><font-awesome-icon class="search-icon" :icon="['fas', 'user']" /></span>
+        <div class="main-input-box">
+            <div class="input-box">
+                <div class="highlight-bottom">
+                    <div class="text-user-box">
+                        <span class="text-user"><font-awesome-icon class="search-icon" :icon="['fas', 'user']" /></span>
+                    </div>
+                    <div class="detail-input-box">
+                        <input placeholder="Nama Penyedia" class="item-detail-input" type="text">
+                    </div>
                 </div>
-                <div class="input-username-box">
-                    <input class="username-input" type="text">
-                </div>
-            </label>
+            </div>
+            <div class="input-box">
+                <label class="highlight-bottom">
+                    <div class="text-user-box">
+                        <span class="text-user"><font-awesome-icon class="search-icon" :icon="['fas', 'user']" /></span>
+                    </div>
+                    <div class="detail-input-box">
+                        <input placeholder="Nama Produk" v-model="productName" class="item-detail-input" type="text">
+                    </div>
+                </label>
+            </div>
+            <div class="input-box">
+                <label class="highlight-bottom">
+                    <div class="text-user-box">
+                        <span class="text-user"><font-awesome-icon class="search-icon" :icon="['fas', 'user']" /></span>
+                    </div>
+                    <div class="detail-input-box">
+                        <input placeholder="Tanggal Kadaluarsa" class="item-detail-input" type="text">
+                    </div>
+                </label>
+            </div>
+            <div class="input-box">
+                <label class="highlight-bottom">
+                    <div class="text-user-box">
+                        <span class="text-user"><font-awesome-icon class="search-icon" :icon="['fas', 'user']" /></span>
+                    </div>
+                    <div class="detail-input-box">
+                        <input placeholder="Jumlah Barang" class="item-detail-input" type="text">
+                    </div>
+                </label>
+            </div>
         </div>
-        <div class="product-input-box">
-            <label class="highlight-bottom">
-                <div class="text-user-box">
-                    <span class="text-user"><font-awesome-icon class="search-icon" :icon="['fas', 'user']" /></span>
-                </div>
-                <div class="input-username-box">
-                    <input class="username-input" type="text">
-                </div>
-            </label>
         </div>
-        <div class="expired-input-box">
-            <label class="highlight-bottom">
-                <div class="text-user-box">
-                    <span class="text-user"><font-awesome-icon class="search-icon" :icon="['fas', 'user']" /></span>
-                </div>
-                <div class="input-username-box">
-                    <input class="username-input" type="text">
-                </div>
-            </label>
-        </div>
-        <div class="quantity-input-box">
-            <label class="highlight-bottom">
-                <div class="text-user-box">
-                    <span class="text-user"><font-awesome-icon class="search-icon" :icon="['fas', 'user']" /></span>
-                </div>
-                <div class="input-username-box">
-                    <input class="username-input" type="text">
-                </div>
-            </label>
-        </div>
-    </div>
 </template>
 
 <script>
@@ -55,7 +57,8 @@
         },
         data(){
             return{
-                title: 'Tambah Barang'
+                title: 'Tambah Barang',
+                productName: this.$route.query.productName,
             }
         }
     }

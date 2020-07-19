@@ -15,7 +15,7 @@ import AddItemContainerActivity from "../views/AddItemContainerActivity";
 
 Vue.use(VueRouter);
 Vue.use(VueHead);
-Vue.use(VModal);
+Vue.use(VModal, { dynamicDefault: { draggable: true, resizable: true } });
 
 const routes = [
   { path: '/', name: 'home', component: Home},

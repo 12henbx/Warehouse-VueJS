@@ -2,24 +2,24 @@
   <form class="container-sign-in">
     <h1>Log In</h1>
     <div class="username-box">
-      <label class="highlight-bottom">
+      <div class="highlight-bottom">
         <div class="text-user-box">
           <span class="text-user"><font-awesome-icon class="search-icon" :icon="['fas', 'user']" /></span>
         </div>
         <div class="input-username-box">
-          <input class="username-input" type="text">
+          <input placeholder="Username" class="login-input" type="text">
         </div>
-      </label>
+      </div>
     </div>
     <div class="password-box">
-      <label class="highlight-bottom">
+      <div class="highlight-bottom">
         <div class="text-user-box">
           <span class="text-user"><font-awesome-icon class="search-icon" :icon="['fas', 'lock']" /></span>
         </div>
         <div class="input-username-box">
-          <input class="username-input" type="password">
+          <input placeholder="Password" class="login-input" type="password">
         </div>
-      </label>
+      </div>
     </div>
     <input type="submit" class="signin-btn" value="Login">
     <span class="bottom-text">Don't have an account? <a href="/signup">Sign Up</a></span>

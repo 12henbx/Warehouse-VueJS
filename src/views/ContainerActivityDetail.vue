@@ -73,7 +73,8 @@
                 console.log(decodedString.toString())
                 if (decodedString !== ""){
                     this.productName = decodedString.toString();
-                    router.push({ path: `/container-activity/${this.$route.params.id}/add-item`})
+                    router.push({ path: `/container-activity/${this.$route.params.id}/add-item`, query: { productName : this.productName } })
+                    // router.push({ name: name, query: { term : query } })
                 }
             }
         }

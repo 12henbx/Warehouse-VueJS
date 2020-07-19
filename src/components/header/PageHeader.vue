@@ -8,6 +8,11 @@
             <div class="title-box">
                 <h3 class="menu-title">{{menuTitle}}</h3>
             </div>
+            <div class="add-button-box" v-if="menuTitle === 'Tambah Barang'">
+                <span>
+                    <button>Tambah</button>
+                </span>
+            </div>
         </header>
 </template>
 
@@ -25,7 +30,7 @@
         display: flex;
         position: fixed;
         height: 54px;
-        width: fit-content;
+        width: 100%;
         flex-direction: row;
         align-items: center;
         padding: 0 10px;
@@ -42,5 +47,13 @@
 
     .menu-title {
         margin-top: 8px;
+    }
+
+    .add-button-box{
+        display: flex;
+        float: right;
+        margin-right: 0;
+        position: relative;
+        width: 100px;
     }
 </style>
