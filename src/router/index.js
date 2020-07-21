@@ -12,6 +12,7 @@ import Statistics from "../views/Statistics";
 import PutawayInbound from "../views/PutawayInbound";
 import PutawayOutbound from "../views/PutawayOutbound";
 import AddItemContainerActivity from "../views/AddItemContainerActivity";
+import MapInboundPutaway from "../views/MapInboundPutaway";
 
 Vue.use(VueRouter);
 Vue.use(VueHead);
@@ -27,7 +28,8 @@ const routes = [
   { path: '/statistics', name: 'statistics', component: Statistics },
   { path: '/putaway-inbound', name: 'putaway inbound', component: PutawayInbound },
   { path: '/putaway-outbound', name: 'putaway outbound', component: PutawayOutbound },
-  { path: '/container-activity/:id/add-item', name: 'container activity add item', component: AddItemContainerActivity }
+  { path: '/container-activity/:id/add-item', name: 'container activity add item', component: AddItemContainerActivity },
+  { path: '/container-activity/:id/map-inbound', name: 'map inbound putaway', component: MapInboundPutaway }
   // {
   //   path: '/about',
   //   name: 'about',
