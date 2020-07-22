@@ -6,3 +6,15 @@
   height: auto;
   //margin: 0 auto 5px;
 }
+
+.place-header{
+  display: flex;
+  width: 100%;
+  height: 54px;
+}
+
+.search-area {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}

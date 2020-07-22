@@ -3,6 +3,9 @@
         <div class="place-header">
             <PageHeader v-bind:menuTitle="title"></PageHeader>
         </div>
+        <div class="search-area">
+            <SearchBar v-bind:searchQuery="searchQuery"></SearchBar>
+        </div>
         <div>
             <ul class="card-list">
                 <li v-for="(activityItem, index) in caList" :key="`activityItem-${index}`" class="button-item">
@@ -16,11 +19,14 @@
 <script>
     import PageHeader from "../components/header/PageHeader";
     import ContainerActivityList from "../components/listCard/ContainerActivityList";
+    import SearchBar from "../components/search/SearchBar";
+
     export default {
         name: "ContainerActivity",
         components: {
             ContainerActivityList,
-            PageHeader
+            PageHeader,
+            SearchBar
         },
         data(){
             return{
@@ -29,7 +35,8 @@
                     {containerActivity: 'CA-1279-PO-55-121', type: 'Regular', containerNo: '3456-2ACF', loadingDock: 'Batu', checker: 'Kurnia', status: 'Pending'},
                     {containerActivity: 'CA-1280-PO-57-125', type: 'Reject', containerNo: '3456-9DPT', loadingDock: 'Ceper', checker: 'Budi', status: 'Pending'}
                 ],
-                title: "Container Activity"
+                title: "Container Activity",
+                searchQuery: '',
             }
         }
     }

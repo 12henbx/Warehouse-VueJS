@@ -68,5 +68,5 @@
     @import "src/styles/basics/variables";
     @import "src/styles/basics/fonts";
     @import "src/styles/basics/viewpage";
-    @import "src/styles/page/additemcontainer";
+    @import "src/styles/page/additemca";
 </style>

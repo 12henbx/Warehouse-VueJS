@@ -3,13 +3,13 @@
     <LogoHeader></LogoHeader>
     <MenuHeader v-bind:activeMenu="activeMenu"></MenuHeader>
       <div>
-          <h4>Inbound</h4>
+          <h4 class="text-h4">Inbound</h4>
           <ul :style="gridStyle" class="card-grid">
             <li v-for="(menu, index) in inboundList" :key="`menu-${index}`" class="button-item">
                 <HomeMenu v-bind:textMenu="menu"></HomeMenu>
             </li>
           </ul>
-          <h4>Outbound</h4>
+          <h4 class="text-h4">Outbound</h4>
           <ul :style="gridStyle" class="card-grid">
               <li v-for="(menu, index) in outboundList" :key="`menu-${index}`" class="button-item">
                   <HomeMenu v-bind:textMenu="menu"></HomeMenu>
@@ -42,14 +42,15 @@ export default {
     return {
       activeMenu: 'home',
         inboundList: [
-            {name: 'ASN', new: 1, link: 'assign loading dock', query: 'asn-9'},
+            {name: 'ASN', new: 0, link: 'advance shipping notice', query: 'asn-9'},
+            {name: 'Assign Loading Dock', new: 1, link: 'assign loading dock', query: 'asn-9'},
             {name: 'Container Activity', new: 0, link: 'container activity', query: 'asn-9'},
-            {name: 'Putaway', new: 1, link: 'putaway/index', query: 'asn-9'}
+            {name: 'Putaway', new: 1, link: 'putaway inbound', query: 'asn-9'}
         ], // Vue.set(vm.userProfile, 'age', 27)
         outboundList: [
             {name: 'Sales Order', new: 1, link: 'sales order', query: 'so-9'},
-            {name: 'Picking Sales Order', new: 0, link: 'picking sales order', query: 'asn-9'},
-            {name: 'Putaway', new: 0, link: 'putaway', query: 'asn-9'}
+            {name: 'Pick Sales Order', new: 0, link: 'pick sales order', query: 'asn-9'},
+            {name: 'Putaway', new: 0, link: 'putaway outbound', query: 'asn-9'}
         ]
     }
   },

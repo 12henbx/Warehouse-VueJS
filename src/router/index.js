@@ -13,6 +13,10 @@ import PutawayInbound from "../views/PutawayInbound";
 import PutawayOutbound from "../views/PutawayOutbound";
 import AddItemContainerActivity from "../views/AddItemContainerActivity";
 import MapInboundPutaway from "../views/MapInboundPutaway";
+import SalesOrder from "../views/SalesOrder";
+import PickSalesOrder from "../views/PickSalesOrder";
+import AddItemPickSalesOrder from "../views/AddItemPickSalesOrder";
+import AdvanceShippingNotice from "../views/AdvanceShippingNotice";
 
 Vue.use(VueRouter);
 Vue.use(VueHead);
@@ -22,14 +26,18 @@ const routes = [
   { path: '/', name: 'home', component: Home},
   { path: '/login', name: 'login', component: SignIn },
   { path: '/notifications', name: 'notifications', component: Notification },
+  { path: '/advance-shipping-notice/', name: 'advance shipping notice', component: AdvanceShippingNotice },
   { path: '/assignld', name: 'assign loading dock', component: AssignLD },
   { path: '/container-activity', name: 'container activity', component: ContainerActivity },
   { path: '/container-activity/:id', name: 'container activity detail', component: ContainerActivityDetail },
   { path: '/statistics', name: 'statistics', component: Statistics },
   { path: '/putaway-inbound', name: 'putaway inbound', component: PutawayInbound },
-  { path: '/putaway-outbound', name: 'putaway outbound', component: PutawayOutbound },
   { path: '/container-activity/:id/add-item', name: 'container activity add item', component: AddItemContainerActivity },
-  { path: '/container-activity/:id/map-inbound', name: 'map inbound putaway', component: MapInboundPutaway }
+  { path: '/container-activity/:id/map-inbound', name: 'map inbound putaway', component: MapInboundPutaway },
+  { path: '/sales-order', name: 'sales order', component: SalesOrder },
+  { path: '/pick-sales-order', name: 'pick sales order', component: PickSalesOrder },
+  { path: '/putaway-outbound', name: 'putaway outbound', component: PutawayOutbound },
+  { path: '/pick-sales-order/add-item', name: 'pick sales order add item', component: AddItemPickSalesOrder }
   // {
   //   path: '/about',
   //   name: 'about',

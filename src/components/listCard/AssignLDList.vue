@@ -25,11 +25,14 @@
                 </div>
             </div>
         </div>
+        <modal name="example1">
+            dropdown pilih loading dock, klik next, masuk ke page container activity
+        </modal>
     </div>
 </template>
 
 <script>
-    import router from "../../router";
+
     export default {
         name: "AssignLDList",
         props: {
@@ -37,7 +40,8 @@
         },
         methods: {
             even() {
-                router.push("/")
+                // router.push("/")
+                this.$modal.show('example1')
             }
         }
     }

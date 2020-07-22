@@ -3,28 +3,23 @@
         <div class="place-header">
             <PageHeader v-bind:menuTitle="title"></PageHeader>
         </div>
-        <div class="search-area">
-            <SearchBar v-bind:searchQuery="searchQuery"></SearchBar>
-        </div>
     </div>
 </template>
 
 <script>
     import PageHeader from "../components/header/PageHeader";
-    import SearchBar from "../components/search/SearchBar";
 
     export default {
-        name: "SalesOrder",
+        name: "AddItemPickSalesOrder",
         components: {
             PageHeader,
-            SearchBar
         },
         props:{
 
         },
         data(){
             return{
-                title: 'Sales Order'
+                title: 'Add Item Pick SO'
             }
         }
     }
@@ -34,5 +29,5 @@
     @import "src/styles/basics/variables";
     @import "src/styles/basics/fonts";
     @import "src/styles/basics/viewpage";
-    @import "src/styles/page/salesorder";
+    @import "src/styles/page/additempickso";
 </style>

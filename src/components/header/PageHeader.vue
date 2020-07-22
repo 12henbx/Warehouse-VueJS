@@ -1,6 +1,6 @@
 <template>
         <header class="header-box">
-            <div class="icon-box">
+            <div @click="back" class="icon-box">
                 <span class="icon-span">
                     <font-awesome-icon class="back-icon" :icon="['fas', 'arrow-left']" />
                 </span>
@@ -9,28 +9,38 @@
                 <h3 class="menu-title">{{menuTitle}}</h3>
             </div>
             <div class="add-button-box" v-if="menuTitle === 'Tambah Barang'">
-                <span>
-                    <button>Tambah</button>
+                <span class="add-button">
+                    <button class="add-button">Tambah</button>
                 </span>
             </div>
         </header>
 </template>
 
 <script>
+    import router from "../../router";
+
     export default {
         name: "PageHeader",
         props:{
             menuTitle:String
+        },
+        methods: {
+            back(){
+                router.go(-1)
+            }
         }
     }
 </script>
 
 <style lang="scss" scoped>
+    @import "src/styles/basics/variables";
+
     .header-box {
         display: flex;
         position: fixed;
         height: 54px;
-        width: 100%;
+        max-width: $max-phone-width;
+        width: $max-phone-width;
         flex-direction: row;
         align-items: center;
         padding: 0 10px;
@@ -45,15 +55,26 @@
         font-size: 28px;
     }
 
+    .title-box {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: flex-start;
+        width: 75%;
+        margin-right: 20px;
+    }
+
     .menu-title {
         margin-top: 8px;
     }
 
     .add-button-box{
         display: flex;
-        float: right;
         margin-right: 0;
-        position: relative;
-        width: 100px;
+        justify-content: flex-end;
+    }
+
+    .add-button{
+        display: flex;
     }
 </style>
