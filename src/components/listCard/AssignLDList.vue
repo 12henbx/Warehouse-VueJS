@@ -1,9 +1,14 @@
 <template>
-    <div @click="even" class="card-box">
+    <div v-on:click="emitToAssignLd(getKey)" class="card-box">
         <div class="top-card-box">
-            <span>{{ assignObject.truck }}</span>
-            <span> - </span>
-            <span>{{ assignObject.asn }}</span>
+            <div>
+                <span>{{ assignObject.loadingDock }}</span>
+            </div>
+            <div>
+                <span>{{ assignObject.truck }}</span>
+                <span> - </span>
+                <span>{{ assignObject.asn }}</span>
+            </div>
         </div>
         <div class="middle-card-box">
             <div class="left-middle-card">
@@ -25,9 +30,6 @@
                 </div>
             </div>
         </div>
-        <modal name="example1">
-            dropdown pilih loading dock, klik next, masuk ke page container activity
-        </modal>
     </div>
 </template>
 
@@ -36,12 +38,12 @@
     export default {
         name: "AssignLDList",
         props: {
-            assignObject:Object
+            assignObject:Object,
+            getKey:Number,
         },
         methods: {
-            even() {
-                // router.push("/")
-                this.$modal.show('example1')
+            emitToAssignLd(getKey){
+                this.$emit('openModal', getKey)
             }
         }
     }

@@ -57,4 +57,19 @@
     .card-box:hover {
         background: #dde9fd;
     }
+
+    .middle-card-box{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .background-bottom-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background: #adadad;
+        border-radius: 4px;
+    }
 </style>
