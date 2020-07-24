@@ -1,0 +1,38 @@
+.map-box-area{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.grid-map {
+  width: fit-content;
+  height: fit-content;
+  border: black solid 1px;
+}
+
+.row-cell-box {
+  display: flex;
+  flex-direction: row;
+  width: 320px;
+  height: 16px;
+}
+
+.one-cell{
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border: black solid 1px;
+}
+
+.active {
+  background-color: #ff5900;
+}
+
+.blocked {
+  background-color: black;
+}
+
+.cell-span {
+  width: max-content;
+  height: max-content;
+}

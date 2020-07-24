@@ -1,27 +1,22 @@
 <template>
-    <div @click="moveToAssignLd(asnObject.asn)" class="card-box">
+    <div @click="moveToAssignLd()" class="card-box">
         <div class="top-card-box">
-            <span>{{ salesOrderObject.asn }}</span>
-            <span> - </span>
-            <span>{{ salesOrderObject.inventoryType }}</span>
+            <span>{{ salesOrderObject.salesOrderNo }}</span>
+            <br>
+            <span>{{ salesOrderObject.arriveTo }}</span>
         </div>
         <div class="middle-card-box">
-            <div class="left-middle-card">
-                <a>{{ salesOrderObject.asnDate }}</a>
-            </div>
-            <div class="right-middle-card/">
-                <a>{{ salesOrderObject.asnDate }}</a>
-                <a> - </a>
-                <a>{{ salesOrderObject.asnDate }}</a>
-            </div>
+            <span><a>{{ salesOrderObject.logistic }}</a></span>
+            <span><a>{{ salesOrderObject.airwayBill }}</a></span>
+            <a>{{ salesOrderObject.dateSO }}</a>
         </div>
         <div class="bottom-card-box">
             <div class="background-bottom-card">
                 <div class="left-bottom-card">
-                    <a>{{ salesOrderObject.supplier }}</a>
+                    <a>{{ salesOrderObject.picker }}</a>
                 </div>
                 <div class="right-bottom-card">
-                    <a>{{ salesOrderObject.warehouse }}</a>
+                    <a>{{ salesOrderObject.handling }}</a>
                 </div>
             </div>
         </div>
@@ -38,11 +33,7 @@
         },
         data(){
             return{
-                items: [
-                    {salesOrderNo: '', caNo: '', },
-                    {},
-                    {},
-                ]
+
             }
         },
         methods:{
@@ -65,5 +56,19 @@
 
     .card-box:hover {
         background: #dde9fd;
+    }
+
+    .middle-card-box{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .background-bottom-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background: #adadad;
+        border-radius: 4px;
     }
 </style>

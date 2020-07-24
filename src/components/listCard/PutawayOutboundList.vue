@@ -1,9 +1,9 @@
 <template>
     <div @click="goToMap(putawayInboundObject.containerActivity)" class="card-box">
         <div class="top-card-box">
-                <span>{{ putawayInboundObject.containerActivity }}</span>
-                <span> - </span>
-                <span>{{ putawayInboundObject.asn }}</span>
+            <span>{{ putawayInboundObject.containerActivity }}</span>
+            <span> - </span>
+            <span>{{ putawayInboundObject.asn }}</span>
         </div>
         <div class="middle-card-box">
             <span><a>{{ putawayInboundObject.loadingDock }}</a></span>
@@ -22,17 +22,10 @@
 </template>
 
 <script>
-    import router from "../../router";
-
     export default {
-        name: "PutawayList",
-        props:{
-            putawayInboundObject: Object,
-        },
-        methods:{
-            goToMap(cActivity){
-                router.push({ path: `/putaway-inbound/${cActivity}/map-inbound`})
-            }
+        name: "PutawayOutboundList",
+        props: {
+            putawayOutboundObject: Object
         }
     }
 </script>

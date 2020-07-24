@@ -3,7 +3,7 @@
         <div class="background-detail-box">
             <div>
                 <ul :style="gridStyle" class="card-grid">
-                    <li v-for="(item, index) in caDetailObject" :key="`item-${index}`" class="button-item">
+                    <li v-for="(item, index) in detailItem" :key="`item-${index}`" class="button-item">
                         <a>{{ item }}</a>
                     </li>
                 </ul>

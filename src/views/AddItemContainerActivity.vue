@@ -1,7 +1,7 @@
 <template>
     <div class="container-page">
         <div class="place-header">
-            <PageHeader v-bind:menuTitle="title"></PageHeader>
+            <PageHeader v-bind:menuTitle="title" v-on:containerActivityProduct="submitItemCA"></PageHeader>
         </div>
         <div class="main-input-box">
             <div class="input-box">
@@ -10,7 +10,7 @@
                         <span class="text-user"><font-awesome-icon class="search-icon" :icon="['fas', 'user']" /></span>
                     </div>
                     <div class="detail-input-box">
-                        <input placeholder="Nama Penyedia" class="item-detail-input" type="text">
+                        <input v-model="supplierName" placeholder="Nama Penyedia" class="item-detail-input" type="text">
                     </div>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                         <span class="text-user"><font-awesome-icon class="search-icon" :icon="['fas', 'user']" /></span>
                     </div>
                     <div class="detail-input-box">
-                        <input placeholder="Tanggal Kadaluarsa" class="item-detail-input" type="text">
+                        <input v-model="ExpiredDate" placeholder="Tanggal Kadaluarsa" class="item-detail-input" type="text">
                     </div>
                 </label>
             </div>
@@ -40,7 +40,7 @@
                         <span class="text-user"><font-awesome-icon class="search-icon" :icon="['fas', 'user']" /></span>
                     </div>
                     <div class="detail-input-box">
-                        <input placeholder="Jumlah Barang" class="item-detail-input" type="text">
+                        <input v-model="itemQuantity" placeholder="Jumlah Barang" class="item-detail-input" type="text">
                     </div>
                 </label>
             </div>
@@ -50,6 +50,8 @@
 
 <script>
     import PageHeader from "../components/header/PageHeader";
+    import router from "../router/index";
+
     export default {
         name: "AddItemContainerActivity",
         components: {
@@ -57,8 +59,17 @@
         },
         data(){
             return{
-                title: 'Tambah Barang',
+                title: 'Tambah Barang CA',
+                supplierName: '',
                 productName: this.$route.query.productName,
+                ExpiredDate: '',
+                itemQuantity: '',
+            }
+        },
+        methods:{
+            submitItemCA(){
+                //TODO : post data item
+                router.go(-1);
             }
         }
     }

@@ -1,40 +1,61 @@
 <template>
-    <div>
-        <l-map style="height: 350px" :zoom="zoom" :center="center">
-            <l-tile-layer :url="url"></l-tile-layer>
-            <l-geo-json :geojson="geojson"></l-geo-json>
-        </l-map>
+    <div class="container-page">
+        <div class="place-header">
+            <PageHeader v-bind:menuTitle="title"></PageHeader>
+        </div>
+        <div class="map-box-area">
+            <div class="grid-map">
+                <div class="row-cell-box" v-for="m in col" :key="`mapDiv-${m}`">
+                    <div v-for="n in row" @click="clickCell(m,n)"
+                         :key="`mapCell-${n}`"
+                         class="one-cell"
+                    >
+                        <div v-if="activeCellss(m,n)" class="cell-span active"></div>
+                        <div v-if="!activeCellss(m,n)" class="cell-span blocked"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
-    import {LGeoJson, LMap, LTileLayer} from 'vue2-leaflet';
-    import product from './geoson.js';
+    import PageHeader from "../components/header/PageHeader";
+    import { blockedCells } from "../astar/SetBlockedCells";
 
     export default {
         name: "MapInboundPutaway",
+        computed:{
+
+        },
         components: {
-            LMap,
-            LTileLayer,
-            LGeoJson
+            PageHeader
         },
         data(){
-            return {
-                url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-                zoom: 8,
-                center: [43.21031,46.26841],
-                geojson: null,
-                egojson: product.features,
+            return{
+                dBlockedCells: blockedCells,
+                col: blockedCells.length,
+                row: blockedCells[0].length,
+                title: 'Map'
             }
         },
-        async created() {
-            // const response = await fetch("https://rawgit.com/gregoiredavid/france-geojson/master/regions/pays-de-la-loire/communes-pays-de-la-loire.geojson")
-            const response = await fetch(this.egojson);
-            this.geojson = await response.json();
+        methods: {
+            clickCell(i,j){
+                console.log(i, ' ', j);
+            },
+            activeCellss(i,j) {
+                if (this.dBlockedCells[i-1][j-1] === 1){
+                    console.log(i-1, j-1);
+                }
+                return this.dBlockedCells[i-1][j-1] === 0;
+            },
         }
     }
 </script>
 
 <style lang="scss" scoped>
-
+    @import "src/styles/basics/variables";
+    @import "src/styles/basics/fonts";
+    @import "src/styles/basics/viewpage";
+    @import "src/styles/page/mapinbound";
 </style>

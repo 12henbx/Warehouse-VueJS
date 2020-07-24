@@ -20,7 +20,7 @@
             </div>
             <div class="bottom-putaway-box">
                 <div class="background-bottom-putaway">
-                    <button @click="goToMap" class="button-putaway">Putaway</button>
+                    <button @click="goToPutaway" class="button-putaway">Putaway</button>
                 </div>
             </div>
             <modal name="example">
@@ -37,7 +37,7 @@
     import ContainerActivityDetailList from "../components/listCard/ContainerActivityDetailList";
     // import { QrcodeStream } from 'vue-qrcode-reader'
 
-    export default {
+    export default { // TODO : get list of product item
         name: "ContainerActivityDetail",
         watch : {
             onCam(val){
@@ -66,8 +66,8 @@
                 // router.push({ path: `/container-activity/${this.$route.params.id}/add-item`})
                 this.onCam = true
             },
-            goToMap(){
-
+            goToPutaway(){
+                router.push({ path: '/putaway-inbound/', query: { caNumber : this.title } })
             },
             onDecode (decodedString) {
                 console.log(decodedString.toString())

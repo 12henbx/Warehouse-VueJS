@@ -8,11 +8,16 @@
             <div class="title-box">
                 <h3 class="menu-title">{{menuTitle}}</h3>
             </div>
-            <div class="add-button-box" v-if="menuTitle === 'Tambah Barang'">
+            <div class="add-button-box" v-if="menuTitle === 'Tambah Barang CA' || menuTitle === 'Pick Sales Order'">
                 <span class="add-button">
-                    <button class="add-button">Tambah</button>
+                    <button class="add-button" @click="submitItem">Tambah</button>
                 </span>
             </div>
+<!--            <div class="add-button-box" v-else-if="menuTitle === 'Pick Sales Order'">-->
+<!--                <span class="add-button">-->
+<!--                    <button class="add-button" @click="submitItem">Tambah</button>-->
+<!--                </span>-->
+<!--            </div>-->
         </header>
 </template>
 
@@ -27,6 +32,11 @@
         methods: {
             back(){
                 router.go(-1)
+            },
+            submitItem(){
+                if (this.menuTitle === 'Tambah Barang CA'){
+                    this.$emit('containerActivityProduct');
+                }
             }
         }
     }

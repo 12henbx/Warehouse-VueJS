@@ -33,7 +33,7 @@ const routes = [
   { path: '/statistics', name: 'statistics', component: Statistics },
   { path: '/putaway-inbound', name: 'putaway inbound', component: PutawayInbound },
   { path: '/container-activity/:id/add-item', name: 'container activity add item', component: AddItemContainerActivity },
-  { path: '/container-activity/:id/map-inbound', name: 'map inbound putaway', component: MapInboundPutaway },
+  { path: '/putaway-inbound/:id/map-inbound', name: 'map inbound putaway', component: MapInboundPutaway },
   { path: '/sales-order', name: 'sales order', component: SalesOrder },
   { path: '/pick-sales-order', name: 'pick sales order', component: PickSalesOrder },
   { path: '/putaway-outbound', name: 'putaway outbound', component: PutawayOutbound },
