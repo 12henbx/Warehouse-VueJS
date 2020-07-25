@@ -2,12 +2,12 @@
     <div @click="moveToDetail(caItem.containerActivity)" class="card-box">
         <div class="top-card-box">
             <span class="supplier-text">
-                PT. Makmur Jaya
+                {{productObject.supplier}}
             </span>
         </div>
         <div class="bottom-card-box">
             <span class="product-name-text">
-                Choco Cheese Roll
+                {{productObject.productName}}
             </span>
         </div>
     </div>
@@ -15,7 +15,10 @@
 
 <script>
     export default {
-        name: "ContainerActivityDetailList"
+        name: "ContainerActivityDetailList",
+        props: {
+            productObject:Object,
+        }
     }
 </script>
 

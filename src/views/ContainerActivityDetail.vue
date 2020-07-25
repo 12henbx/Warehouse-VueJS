@@ -16,7 +16,11 @@
                 </div>
             </div>
             <div class="middle-list-box">
-                <ContainerActivityDetailList></ContainerActivityDetailList>
+                <ul class="card-list">
+                    <li v-for="(product, index) in dataItem" :key="`product-${index}`" class="button-item">
+                        <ContainerActivityDetailList v-bind:productObject="product"></ContainerActivityDetailList>
+                    </li>
+                </ul>
             </div>
             <div class="bottom-putaway-box">
                 <div class="background-bottom-putaway">
@@ -42,7 +46,7 @@
         watch : {
             onCam(val){
                 if (val === true){
-                    console.log("satu")
+                    // console.log("satu")
                     this.$modal.show('example')
                     this.onCam = false
                 }
@@ -58,7 +62,13 @@
             return {
                 title: this.$route.params.id,
                 onCam: false,
-                productName: ''
+                productName: '',
+                dataItem:[
+                    {sku: 'WH-01-04/99', productName: 'Monitor', quantity: '1', expiredDate: '30-12-2100', asn: 'ASN-10/wq/123/tr'},
+                    {sku: 'WH-02-04/90', productName: 'Wired Mouse', quantity: '1', expiredDate: '30-12-2100', asn: 'ASN-12/wq/124/yu'},
+                    {sku: 'WH-01-05/10', productName: 'Cable Coax', quantity: '1', expiredDate: '30-12-2100', asn: 'ASN-14/wq/126/io'},
+                    {sku: 'WH-02-05/77', productName: 'Headset', quantity: '1', expiredDate: '30-12-2100', asn: 'ASN-14/wq/126/io'}
+                ]
             }
         },
         methods: {

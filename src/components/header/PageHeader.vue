@@ -8,16 +8,16 @@
             <div class="title-box">
                 <h3 class="menu-title">{{menuTitle}}</h3>
             </div>
-            <div class="add-button-box" v-if="menuTitle === 'Tambah Barang CA' || menuTitle === 'Pick Sales Order'">
+            <div class="add-button-box" v-if="menuTitle === 'Tambah Barang CA' || menuTitle === 'Pick Sales Order' || menuTitle === 'Container Activity'">
                 <span class="add-button">
                     <button class="add-button" @click="submitItem">Tambah</button>
                 </span>
             </div>
-<!--            <div class="add-button-box" v-else-if="menuTitle === 'Pick Sales Order'">-->
-<!--                <span class="add-button">-->
-<!--                    <button class="add-button" @click="submitItem">Tambah</button>-->
-<!--                </span>-->
-<!--            </div>-->
+            <div class="add-button-box" v-else-if="menuTitle === 'Map Inbound'">
+                <span class="add-button">
+                    <button class="add-button" @click="scanContainer">Scan Container</button>
+                </span>
+            </div>
         </header>
 </template>
 
@@ -36,7 +36,12 @@
             submitItem(){
                 if (this.menuTitle === 'Tambah Barang CA'){
                     this.$emit('containerActivityProduct');
+                }else if (this.menuTitle === 'Container Activity'){
+                    router.push({ name: 'add container activity'})
                 }
+            },
+            scanContainer(){
+                this.$emit('openScanContainer')
             }
         }
     }
@@ -50,11 +55,13 @@
         position: fixed;
         height: 54px;
         max-width: $max-phone-width;
-        width: $max-phone-width;
+        width: 100%;
         flex-direction: row;
         align-items: center;
         padding: 0 10px;
         z-index: 100;
+        white-space: pre-wrap;
+        background-color: #fff;
     }
 
     .icon-box {
@@ -70,7 +77,7 @@
         flex-direction: row;
         align-items: stretch;
         justify-content: flex-start;
-        width: 75%;
+        width: 65%;
         margin-right: 20px;
     }
 
@@ -86,5 +93,7 @@
 
     .add-button{
         display: flex;
+        width: 70px;
+        font-size: 12px;
     }
 </style>

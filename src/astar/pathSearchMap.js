@@ -1,8 +1,33 @@
-var graphWithWeight = new Graph([
-    [1,1,2,30],
-    [0,4,1.3,0],
-    [0,0,5,1]
+// import { blockedCells } from "../astar/SetBlockedCells";
+import astar from "./astar"
+
+export var graphWithWeight = new astar.Graph([
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,1,0],
+    [1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,1,0],
+    [1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,1,0],
+    [1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,1,0],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,1,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,0,1,1],
+    [1,1,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,0,1,1],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,1,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,0,1,1],
+    [1,1,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,0,1,1],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,1,0,0,0,1,1,0,0,0,1,1,0,0,0,1,1,0,0,1],
+    [1,1,0,0,0,1,1,0,0,0,1,1,0,0,0,1,1,0,0,1],
+    [1,1,0,0,0,1,1,0,0,0,1,1,0,0,0,1,1,0,0,1],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
 ]);
-var startWithWeight = graphWithWeight.grid[0][0];
-var endWithWeight = graphWithWeight.grid[1][2];
-var resultWithWeight = astar.search(graphWithWeight, startWithWeight, endWithWeight);
+
+export function ff(start, end) {
+    return astar.astar.search(graphWithWeight, start, end);
+}
+
+
+export var startWithWeight = graphWithWeight.grid[0][0];
+export var endWithWeight = graphWithWeight.grid[1][2];
+// export var resultWithWeight = astar.search(graphWithWeight, startWithWeight, endWithWeight);

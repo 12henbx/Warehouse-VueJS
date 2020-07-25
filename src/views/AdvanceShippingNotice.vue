@@ -35,11 +35,11 @@
             return{
                 title: 'Advance Shipping Notice',
                 asnList: [
-                    {asn:'ASN-10/wq/123/tr', inventoryType:'', asnDate:'', supplier:'', warehouse: '', notes: ''},
-                    {asn:'ASN-10/wq/123/tr', inventoryType:'', asnDate:'', supplier:'', warehouse: '', notes: ''},
-                    {asn:'ASN-12/wq/124/yu', inventoryType:'', asnDate:'', supplier:'', warehouse: '', notes: ''},
-                    {asn:'ASN-12/wq/124/yu', inventoryType:'', asnDate:'', supplier:'', warehouse: '', notes: ''},
-                    {asn:'ASN-14/wq/126/io', inventoryType:'', asnDate:'', supplier:'', warehouse: '', notes: ''}
+                    {asn:'ASN-10/wq/123/tr', inventoryType:'Regular', asnDate:'09-03-2020', supplier:'Bintang', warehouse: 'Ceper', notes: ''},
+                    {asn:'ASN-10/wq/123/tr', inventoryType:'Regular', asnDate:'11-04-2020', supplier:'Jaya', warehouse: 'Gudang Satu', notes: ''},
+                    {asn:'ASN-12/wq/124/yu', inventoryType:'Regular', asnDate:'03-01-2020', supplier:'Bintang', warehouse: 'Gudang Dua', notes: ''},
+                    {asn:'ASN-12/wq/124/yu', inventoryType:'Regular', asnDate:'04-03-2020', supplier:'Mahkota', warehouse: 'Ceper', notes: ''},
+                    {asn:'ASN-14/wq/126/io', inventoryType:'Regular', asnDate:'04-02-2020', supplier:'Mahkota', warehouse: 'Ceper', notes: ''}
                 ],
             }
         }

@@ -17,6 +17,7 @@ import SalesOrder from "../views/SalesOrder";
 import PickSalesOrder from "../views/PickSalesOrder";
 import AddItemPickSalesOrder from "../views/AddItemPickSalesOrder";
 import AdvanceShippingNotice from "../views/AdvanceShippingNotice";
+import AddContainerActivity from "../views/AddContainerActivity";
 
 Vue.use(VueRouter);
 Vue.use(VueHead);
@@ -29,6 +30,7 @@ const routes = [
   { path: '/advance-shipping-notice/', name: 'advance shipping notice', component: AdvanceShippingNotice },
   { path: '/assignld', name: 'assign loading dock', component: AssignLD },
   { path: '/container-activity', name: 'container activity', component: ContainerActivity },
+  { path: '/container-activity/add', name: 'add container activity', component: AddContainerActivity },
   { path: '/container-activity/:id', name: 'container activity detail', component: ContainerActivityDetail },
   { path: '/statistics', name: 'statistics', component: Statistics },
   { path: '/putaway-inbound', name: 'putaway inbound', component: PutawayInbound },
