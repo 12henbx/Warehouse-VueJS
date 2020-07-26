@@ -1,20 +1,20 @@
 <template>
-    <div @click="goToMap(putawayInboundObject.containerActivity)" class="card-box">
+    <div @click="goToMap(putawayOutboundObject.containerActivity)" class="card-box">
         <div class="top-card-box">
-            <span>{{ putawayInboundObject.containerActivity }}</span>
+            <span>{{ putawayOutboundObject.containerActivity }}</span>
             <span> - </span>
-            <span>{{ putawayInboundObject.asn }}</span>
+            <span>{{ putawayOutboundObject.asn }}</span>
         </div>
         <div class="middle-card-box">
-            <span><a>{{ putawayInboundObject.loadingDock }}</a></span>
+            <span><a>{{ putawayOutboundObject.loadingDock }}</a></span>
         </div>
         <div class="bottom-card-box">
             <div class="background-bottom-card">
                 <div class="left-bottom-card">
-                    <a>{{ putawayInboundObject.checker }}</a>
+                    <a>{{ putawayOutboundObject.checker }}</a>
                 </div>
                 <div class="right-bottom-card">
-                    <a>{{ putawayInboundObject.status }}</a>
+                    <a>{{ putawayOutboundObject.status }}</a>
                 </div>
             </div>
         </div>
@@ -22,10 +22,17 @@
 </template>
 
 <script>
+    import router from "../../router";
+
     export default {
         name: "PutawayOutboundList",
         props: {
             putawayOutboundObject: Object
+        },
+        methods: {
+            goToMap(cActivity){
+                router.push({ path: `/putaway-inbound/${cActivity}/map-inbound`})
+            }
         }
     }
 </script>

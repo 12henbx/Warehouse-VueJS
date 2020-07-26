@@ -4,7 +4,7 @@
             <PageHeader v-bind:menuTitle="title"></PageHeader>
         </div>
         <div>
-            <div>
+            <div class="dialog-box">
                 <div>
                     <input placeholder="No. Container Activity">
                     <button @click="scanAddContainerActivity"> + </button>
@@ -15,7 +15,7 @@
                         <option>Reguler</option>
                         <option>Reject</option>
                     </select>
-                    <button>Tambah</button>
+                    <button class="btn-tambah" @click="tambahBtn">Tambah</button>
                 </div>
             </div>
         </div>
@@ -50,6 +50,9 @@
                     router.go(-1);
                     //TODO : nge-post container activity baru
                 }
+            },
+            tambahBtn(){
+                router.go(-1);
             }
         }
     }

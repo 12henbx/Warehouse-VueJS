@@ -34,9 +34,12 @@
         data(){
             return{
                 title: 'Putaway - Outbound',
-                items: [
-                    {},
-                ]
+                items:[
+                    { containerActivity: 'CA-1278-PO-55-132', asn: 'ASN-10/wq/123/tr', loadingDock: 'Ceper', checker: 'Budi', status: 'Not Assigned' },
+                    { containerActivity: 'CA-1279-PO-55-112', asn: 'ASN-10/wq/123/tr', loadingDock: 'Dok', checker: 'Budi', status: 'Not Assigned' },
+                    { containerActivity: 'CA-1280-PO-57-152', asn: 'ASN-10/wq/123/tr', loadingDock: 'Gde', checker: 'Kurnia', status: 'Not Assigned' }
+                ],
+                searchQuery: '',
             }
         }
     }

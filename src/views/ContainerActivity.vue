@@ -36,7 +36,7 @@
                     {containerActivity: 'CA-1280-PO-57-125', type: 'Reject', containerNo: '3456-9DPT', loadingDock: 'Ceper', checker: 'Budi', status: 'Pending'}
                 ],
                 title: "Container Activity",
-                searchQuery: '',
+                searchQuery: this.$route.query.term,
             }
         }
     }

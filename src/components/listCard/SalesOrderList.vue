@@ -33,12 +33,12 @@
         },
         data(){
             return{
-
+                asnNoQuery: ''
             }
         },
         methods:{
             moveToAssignLd(asnNoQuery){
-                router.push({ name: 'assign loading dock', query: { term : asnNoQuery } })
+                router.push({ name: 'container activity', query: { term : asnNoQuery } })
             }
         }
     }

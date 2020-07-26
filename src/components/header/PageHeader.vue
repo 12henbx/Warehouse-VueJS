@@ -36,7 +36,7 @@
             submitItem(){
                 if (this.menuTitle === 'Tambah Barang CA'){
                     this.$emit('containerActivityProduct');
-                }else if (this.menuTitle === 'Container Activity'){
+                }else if (this.menuTitle === 'Container Activity' || this.menuTitle === 'Pick Sales Order'){
                     router.push({ name: 'add container activity'})
                 }
             },

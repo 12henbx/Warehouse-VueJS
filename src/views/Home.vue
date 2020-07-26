@@ -45,12 +45,12 @@ export default {
             {name: 'ASN', new: 0, link: 'advance shipping notice', query: 'asn-9'},
             {name: 'Assign Loading Dock', new: 1, link: 'assign loading dock', query: 'asn-9'},
             {name: 'Container Activity', new: 0, link: 'container activity', query: 'asn-9'},
-            {name: 'Putaway', new: 1, link: 'putaway inbound', query: 'asn-9'}
+            {name: 'Putaway - Inbound', new: 1, link: 'putaway inbound', query: 'asn-9'}
         ], // Vue.set(vm.userProfile, 'age', 27)
         outboundList: [
             {name: 'Sales Order', new: 1, link: 'sales order', query: 'so-9'},
-            {name: 'Pick Sales Order', new: 0, link: 'pick sales order', query: 'asn-9'},
-            {name: 'Putaway', new: 0, link: 'putaway outbound', query: 'asn-9'}
+            {name: 'Container Activity', new: 0, link: 'container activity'},
+            {name: 'Putaway - Outbound', new: 0, link: 'putaway outbound', query: 'asn-9'}
         ]
     }
   },
