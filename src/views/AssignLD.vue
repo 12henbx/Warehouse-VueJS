@@ -37,11 +37,11 @@
             return {
                 term: this.$route.query.term,
                 items: [
-                    {truck: 'Truk 1', asn:'ASN-10/wq/123/tr', loadingDock: '', assignDate:'05/07/20', assignStartTime:'05:00', assignEndTime:'07:00', internalStatus:'Not Assigned', externalStatus:'Pending'},
-                    {truck: 'Truk 2', asn:'ASN-10/wq/123/tr', loadingDock: '', assignDate:'05/07/20', assignStartTime:'07:00', assignEndTime:'08:00', internalStatus:'Not Assigned', externalStatus:'Pending'},
-                    {truck: 'Truk 1', asn:'ASN-12/wq/124/yu', loadingDock: '', assignDate:'05/07/20', assignStartTime:'08:00', assignEndTime:'09:30', internalStatus:'Not Assigned', externalStatus:'Pending'},
-                    {truck: 'Truk 2', asn:'ASN-12/wq/124/yu', loadingDock: '', assignDate:'05/07/20', assignStartTime:'09:30', assignEndTime:'11:00', internalStatus:'Not Assigned', externalStatus:'Pending'},
-                    {truck: 'Truk 1', asn:'ASN-14/wq/126/io', loadingDock: '', assignDate:'05/07/20', assignStartTime:'11:00', assignEndTime:'12:30', internalStatus:'Not Assigned', externalStatus:'Pending'}
+                    {truck: 'Truk 1', asn:'ASN-10/wq/123/tr', loadingDock: 'Ceper', assignDate:'05/07/20', assignStartTime:'05:00', assignEndTime:'07:00', internalStatus:'Not Assigned', externalStatus:'Pending'},
+                    {truck: 'Truk 2', asn:'ASN-10/wq/123/tr', loadingDock: 'Gudang1', assignDate:'05/07/20', assignStartTime:'07:00', assignEndTime:'08:00', internalStatus:'Not Assigned', externalStatus:'Pending'},
+                    {truck: 'Truk 1', asn:'ASN-12/wq/124/yu', loadingDock: 'Ceper', assignDate:'05/07/20', assignStartTime:'08:00', assignEndTime:'09:30', internalStatus:'Not Assigned', externalStatus:'Pending'},
+                    {truck: 'Truk 2', asn:'ASN-12/wq/124/yu', loadingDock: 'Gudang1', assignDate:'05/07/20', assignStartTime:'09:30', assignEndTime:'11:00', internalStatus:'Not Assigned', externalStatus:'Pending'},
+                    {truck: 'Truk 1', asn:'ASN-14/wq/126/io', loadingDock: 'Gudang2', assignDate:'05/07/20', assignStartTime:'11:00', assignEndTime:'12:30', internalStatus:'Not Assigned', externalStatus:'Pending'}
                 ],
                 searchQuery: this.$route.query.term,
                 title: "Assign Loading Dock",
