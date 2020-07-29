@@ -6,7 +6,7 @@
                 </span>
             </div>
             <div class="title-box">
-                <h3 class="menu-title">{{menuTitle}}</h3>
+                <h4 class="menu-title">{{menuTitle}}</h4>
             </div>
             <div class="add-button-box" v-if="menuTitle === 'Tambah Barang CA' || menuTitle === 'Pick Sales Order' || menuTitle === 'Container Activity'">
                 <span class="add-button">
@@ -54,7 +54,7 @@
         display: flex;
         position: fixed;
         height: 54px;
-        max-width: $max-phone-width;
+        max-width: $max-phone-width - 2px;
         width: 100%;
         flex-direction: row;
         align-items: center;

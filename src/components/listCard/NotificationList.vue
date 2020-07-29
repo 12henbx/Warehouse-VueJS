@@ -1,18 +1,21 @@
 <template>
     <div class="card-box">
         <div class="left-card-box">
-            <span class="notif-text">test</span>
-            <span class="time-text">test1</span>
+            <span class="notif-text">ASN {{notificationObject.asn}} telah ditambahkan</span>
+            <span class="time-text">{{notificationObject.time}} ago</span>
         </div>
         <div class="right-card-box">
-            <span>testtest</span>
+            <span>o</span>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "NotificationList"
+        name: "NotificationList",
+      props: {
+          notificationObject: Object,
+      }
     }
 </script>
 
@@ -27,6 +30,10 @@
         padding: 0 15px;
         border-top: 1px solid #adadad;
         border-bottom: 1px solid #adadad;
+    }
+
+    .card-box:hover {
+      background: #dde9fd;
     }
 
     .left-card-box {

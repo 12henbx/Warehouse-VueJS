@@ -1,29 +1,25 @@
 <template>
     <div @click="moveToAssignLd(asnObject.asn)" class="card-box">
         <div class="top-card-box">
-            <span>{{ asnObject.asn }}</span>
+            <span>No ASN: {{ asnObject.asn }}</span>
             <span> - </span>
-            <span>{{ asnObject.inventoryType }}</span>
+            <span>Inventory: {{ asnObject.inventoryType }}</span>
         </div>
         <div class="middle-card-box">
-            <div class="left-middle-card">
-                <a>{{ asnObject.asnDate }}</a>
-            </div>
-            <div class="right-middle-card/">
-                <a>{{ asnObject.asnDate }}</a>
-                <a> - </a>
-                <a>{{ asnObject.asnDate }}</a>
-            </div>
+            <a>Tanggal ASN : {{ asnObject.asnDate }}</a>
         </div>
         <div class="bottom-card-box">
             <div class="background-bottom-card">
                 <div class="left-bottom-card">
-                    <a>{{ asnObject.supplier }}</a>
+                    <a>Supplier: {{ asnObject.supplier }}</a>
                 </div>
                 <div class="right-bottom-card">
-                    <a>{{ asnObject.warehouse }}</a>
+                    <a>Warehouse: {{ asnObject.warehouse }}</a>
                 </div>
             </div>
+          <div>
+            <a>Notes: {{ asnObject.notes }}</a>
+          </div>
         </div>
     </div>
 </template>

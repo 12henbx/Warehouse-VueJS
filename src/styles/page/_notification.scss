@@ -6,3 +6,19 @@
   height: 2000px;
   margin: 0 auto 5px;
 }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.button-item {
+  display: flex;
+  justify-content: center;
+}
+
+.card-list {
+  display: list-item;
+  //grid-gap: 1em;
+  //text-align: center;
+}

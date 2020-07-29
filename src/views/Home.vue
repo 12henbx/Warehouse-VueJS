@@ -49,8 +49,8 @@ export default {
         ], // Vue.set(vm.userProfile, 'age', 27)
         outboundList: [
             {name: 'Sales Order', new: 1, link: 'sales order', query: 'so-9'},
-            {name: 'Container Activity', new: 0, link: 'container activity'},
-            {name: 'Putaway - Outbound', new: 0, link: 'putaway outbound', query: 'asn-9'}
+            {name: 'Pick SO', new: 0, link: 'container activity'},
+            {name: 'Pack', new: 0, link: 'putaway outbound', query: 'asn-9'}
         ]
     }
   },

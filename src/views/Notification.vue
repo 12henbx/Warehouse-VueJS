@@ -2,7 +2,13 @@
     <div class="container-notification">
         <LogoHeader></LogoHeader>
         <MenuHeader v-bind:activeMenu="activeMenu"></MenuHeader>
-        <NotificationList></NotificationList>
+      <div>
+        <ul class="card-list">
+          <li v-for="(notificationItem, index) in notificationList" :key="`notificationItem-${index}`" class="button-item">
+            <NotificationList v-bind:notificationObject="notificationItem"></NotificationList>
+          </li>
+        </ul>
+      </div>
     </div>
 </template>
 
@@ -21,6 +27,13 @@
         data() {
             return {
                 activeMenu: 'notification',
+              notificationList: [
+                {asn:'ASN-10/wq/123/tr', time: '3 minutes'},
+                {asn:'ASN-10/wq/123/tr', time: '9 minutes'},
+                {asn:'ASN-12/wq/124/yu', time: '10 minutes'},
+                {asn:'ASN-12/wq/124/yu', time: '30 minutes'},
+                {asn:'ASN-14/wq/126/io', time: '44 minutes'}
+              ],
             }
         }
     }
